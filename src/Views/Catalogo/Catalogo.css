@@ -1,0 +1,955 @@
+
+
+
+
+button {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+}
+
+nav.amazing-tabs {
+  background-color: var(--white);
+  border-radius: 2.5rem;
+  user-select: none;
+  padding-top: 1rem;
+}
+
+.main-tabs-container {
+  padding: 0 1rem 1rem 1rem;
+}
+
+.main-tabs-wrapper {
+  position: relative;
+}
+
+ul.main-tabs,
+ul.filter-tabs {
+  list-style-type: none;
+  display: flex;
+}
+
+ul.main-tabs li {
+  display: inline-flex;
+  position: relative;
+  padding: 1.5rem;
+  z-index: 1;
+}
+
+.avatar,
+.avatar img {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.avatar img {
+  object-fit: cover;
+}
+
+.round-button {
+  height: 4.8rem;
+  width: 4.8rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--grey-900);
+  transition: color 0.2s ease-in-out;
+}
+
+.round-button:hover,
+.round-button.active {
+  color: var(--round-button-active-color);
+}
+
+.round-button svg {
+  pointer-events: none;
+  height: 2.8rem;
+  width: 2.8rem;
+  transform: translate(0, 0);
+}
+
+.main-slider {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1.5rem;
+  z-index: 0;
+  transition: transform 0.4s ease-in-out;
+  transform: translateX(var(--translate-main-slider));
+}
+
+.main-slider-circle {
+  height: 4.8rem;
+  width: 4.8rem;
+  border-radius: 50%;
+  transition: background-color 0.4s ease-in-out;
+  background-color: var(--main-slider-color);
+}
+
+.animate-jello {
+  animation: jello-horizontal 0.9s both;
+}
+
+@keyframes jello-horizontal {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.filters-container {
+  overflow: hidden;
+  padding: 0 3rem;
+  transition: max-height 0.4s ease-in-out;
+  max-height: var(--filters-container-height);
+}
+
+.filters-wrapper {
+  position: relative;
+  transition: opacity 0.2s ease-in-out;
+  opacity: var(--filters-wrapper-opacity);
+}
+
+.filter-tabs {
+  border-radius: 1rem;
+  padding: 0.3rem;
+  overflow: hidden;
+  background-color: var(--orange-50);
+}
+
+.filter-tabs li {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex: 1 0 33.33%;
+}
+
+.filter-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.8rem;
+  flex-grow: 1;
+  height: 3rem;
+  padding: 0 1.5rem;
+  color: var(--orange-700);
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+
+.filter-button.filter-active {
+  transition: color 0.4s ease-in-out;
+  color: var(--grey-900);
+}
+
+.filter-slider {
+  pointer-events: none;
+  position: absolute;
+  padding: 0.3rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.filter-slider-rect {
+  height: 3rem;
+  width: 33.33%;
+  border-radius: 0.8rem;
+  background-color: var(--white);
+  box-shadow: 0 0.1rem 1rem -0.4rem rgba(0, 0, 0, 0.12);
+  transition: transform 0.4s ease-in-out;
+  transform: translateX(var(--translate-filters-slider));
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.tabCatalogo{
+  background-color: #ffffff;
+  border-bottom: black;
+
+  border-color:rgba(102, 177, 241, 0.8) ;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  z-index: 10;
+
+  
+}
+
+
+
+@media (max-width: 600px) {
+ .tabCatalogo {
+  display: block;
+    
+    background-color: #ffff;
+    border: 1px solid rgba(102, 177, 241, 0.8);    
+    background: #fff;
+    
+
+
+  }
+
+
+
+
+  .nav-tabs :last-of-type{
+    
+    border-bottom: 1px solid rgba(102, 177, 241, 0.8);
+  
+}
+ 
+ 
+
+  }
+
+
+.puntoTab{
+    font-weight: bold;
+    color: #000000;
+    width: 100%;
+    
+    height: 100%;
+    
+}
+
+.tabCatalogo .puntoTab:hover{
+  color: white;
+  background: rgba(102, 177, 241, 0.8);
+  transition: all 0.5s ease;
+
+  
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+  color: white;
+  background-color:rgba(102, 177, 241, 0.8);
+  width: 100%;
+  height: 100%;
+ 
+  
+
+  
+  
+  
+  
+}
+
+/* /////////////////////////////////////////////////////////////////// */
+
+a {
+  text-decoration: none;
+}
+.et-hero-tabs, .et-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  background: #eee;
+  text-align: center;
+  padding: 0 2em;
+}
+.et-hero-tabs h1, .et-slide h1 {
+  font-size: 2rem;
+  margin: 0;
+  letter-spacing: 1rem;
+}
+.et-hero-tabs h3, .et-slide h3 {
+  font-size: 1rem;
+  letter-spacing: 0.3rem;
+  opacity: 0.6;
+}
+.et-hero-tabs-container {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  z-index: 10;
+}
+.et-hero-tabs-container--top {
+  position: fixed;
+  top: 0;
+}
+.et-hero-tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  color: #000;
+  letter-spacing: 0.1rem;
+  transition: all 0.5s ease;
+  font-size: 0.8rem;
+}
+.et-hero-tab:hover {
+  color: white;
+  background: rgba(102, 177, 241, 0.8);
+  transition: all 0.5s ease;
+}
+.et-hero-tab-slider {
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 6px;
+  background: #66b1f1;
+  transition: left 0.3s ease;
+}
+@media (min-width: 800px) {
+  .et-hero-tabs h1, .et-slide h1 {
+    font-size: 3rem;
+ }
+  .et-hero-tabs h3, .et-slide h3 {
+    font-size: 1rem;
+ }
+  .et-hero-tab {
+    font-size: 1rem;
+ }
+}
+
+
+
+/* /////////////////////////////////////////////////// */
+
+.containerCategoria {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto; }
+    @media (min-width: 576px) {
+      .container {
+        max-width: 540px; } }
+    @media (min-width: 768px) {
+      .container {
+        max-width: 720px; } }
+    @media (min-width: 992px) {
+      .container {
+        max-width: 960px; } }
+    @media (min-width: 1200px) {
+      .container {
+        max-width: 1140px; } }
+  
+
+
+.ftco-section {
+    padding: 6em 0;
+    position: relative; }
+
+    .heading-section .subheading {
+        font-size: 18px;
+        display: block;
+        margin-bottom: 10px;
+        font-family: "Lora", Georgia, serif;
+        font-style: italic;
+        color: #82ae46; }
+      .heading-section h2 {
+        position: relative;
+        font-size: 40px;
+        font-weight: 600;
+        color: #000000;
+        font-family: "Poppins", Arial, sans-serif; }
+        @media (max-width: 767.98px) {
+          .heading-section h2 {
+            font-size: 28px; } }
+      .heading-section.heading-section-white .subheading {
+        color: rgba(255, 255, 255, 0.9); }
+      .heading-section.heading-section-white h2 {
+        font-size: 30px;
+        color: #fff; }
+        .heading-section.heading-section-white h2:after, .heading-section.heading-section-white h2:before {
+          display: none; }
+      .heading-section.heading-section-white p {
+        color: rgba(255, 255, 255, 0.9); }
+
+        .test-card{
+
+          background-color: #fff;
+          top: -32px;
+          
+          position: relative;
+          height: 100px;
+          
+          border-bottom-left-radius: 15px ;
+          border-bottom-right-radius: 15px ;
+          
+          text-align: center;
+          letter-spacing: 0.1px;
+          
+          }
+.product {
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+    position: relative;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    border: 1px solid #f0f0f0; }
+    @media (max-width: 991.98px) {
+      .product {
+        margin-bottom: 30px; } }
+    .product .img-prod {
+      position: relative;
+      display: block;
+      overflow: hidden; }
+      .product .img-prod .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        content: '';
+        opacity: 0;
+        background: #82ae46;
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        -webkit-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        transition: all 0.3s ease; }
+      .product .img-prod span.status {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 2px 10px;
+        color: #fff;
+        font-weight: 300;
+        background: #82ae46;
+        font-size: 12px; }
+      .product .img-prod img {
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        -webkit-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        transition: all 0.3s ease; }
+      .product .img-prod:hover img, .product .img-prod:focus img {
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        transform: scale(1.1); }
+    .product .img {
+      display: block;
+      height: 500px; }
+    .product .icon {
+      width: 60px;
+      height: 60px;
+      background: #fff;
+      opacity: 0;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      border-radius: 50%;
+      -moz-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      -webkit-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+      .product .icon span {
+        color: #000000; }
+    .product:hover .icon {
+      opacity: 1; }
+    .product:hover .img-prod .overlay {
+      opacity: 0; }
+    .product .text {
+      background: #fff;
+      position: relative;
+      width: 100%; }
+      .product .text h3 {
+        font-size: 14px;
+        margin-bottom: 5px;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-family: "Poppins", Arial, sans-serif; }
+        .product .text h3 a {
+          color: #000000; }
+      .product .text p.price {
+        margin-bottom: 0;
+        color: #82ae46;
+        font-weight: 400; }
+        .product .text p.price span.price-dc {
+          text-decoration: line-through;
+          color: #b3b3b3; }
+        .product .text p.price span.price-sale {
+          color: #82ae46; }
+      .product .text .pricing {
+        width: 100%;
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        -webkit-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        transition: all 0.3s ease; }
+      .product .text .bottom-area {
+        position: absolute;
+        bottom: 15px;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        -webkit-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        transition: all 0.3s ease; }
+        .product .text .bottom-area a {
+          color: #fff;
+          width: 100%;
+          background: #82ae46;
+          width: 40px;
+          height: 40px;
+          margin: 0 auto;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          border-radius: 50%; }
+        .product .text .bottom-area .m-auto {
+          margin: 0 auto; }
+    .product:hover {
+      -webkit-box-shadow: 0px 7px 15px -5px rgba(0, 0, 0, 0.07);
+      -moz-box-shadow: 0px 7px 15px -5px rgba(0, 0, 0, 0.07);
+      box-shadow: 0px 7px 15px -5px rgba(0, 0, 0, 0.07); }
+      .product:hover .pricing {
+        opacity: 0; }
+      .product:hover .text .bottom-area {
+        opacity: 1; }
+
+        
+.section-products {
+    padding: 80px 0 54px;
+}
+
+.section-products .header {
+    margin-bottom: 50px;
+}
+
+.section-products .header h3 {
+    font-size: 1rem;
+    color: #fe302f;
+    font-weight: 500;
+}
+
+.section-products .header h2 {
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: #444444; 
+}
+
+.section-products .single-product {
+    margin-bottom: 26px;
+}
+
+.section-products .single-product .part-1 {
+    position: relative;
+    height: 290px;
+    max-height: 290px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.section-products .single-product .part-1::before {
+		position: absolute;
+		content: "";
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		transition: all 0.3s;
+}
+
+.section-products .single-product:hover .part-1::before {
+		transform: scale(1.2,1.2) rotate(5deg);
+}
+
+.section-products #product-0 .part-1::before {
+  background: url("../../Components/Assets/Imgs/Productos/4x4/HarinaDeMaiz-ElSigueñal.webp") no-repeat center;
+  background-size: cover;
+  transition: all 0.3s;
+}
+
+.section-products #product-1 .part-1::before {
+    background: url("../../Components/Assets/Imgs/Productos/4x4/Arroz00000-AF.webp") no-repeat center;
+    background-size: cover;
+		transition: all 0.3s;
+}
+
+.section-products #product-2 .part-1::before {
+    background: url("../../Components/Assets/Imgs/Productos/4x4/Arroz0000-Mitaí.webp") no-repeat center;
+    background-size: cover;
+}
+
+.section-products #product-3 .part-1::before {
+    background: url("../../Components/Assets/Imgs/Productos/4x4/Arroz00000-Mitaí.webp") no-repeat center;
+    background-size: cover;
+}
+
+.section-products #product-4 .part-1::before {
+    background: url("../../Components/Assets/Imgs/Productos/4x4/batata.webp") no-repeat center;
+    background-size: cover;
+}
+
+.section-products #product-5 .part-1::before {
+    background: url("../../Components/Assets/Imgs/Productos/4x4/HarinadeMaizPrecocida-MolinoVillafañe.webp") no-repeat center;
+    background-size: cover;
+}
+
+.section-products #product-6 .part-1::before {
+    background: url("../../Components/Assets/Imgs/Productos/4x4/HarinadeMaizTradicional-MolinoVillafañe.webp") no-repeat center;
+    background-size: cover;
+}
+
+.section-products #product-7 .part-1::before {
+    background: url("../../Components/Assets/Imgs/Productos/4x4/LecheEntera-Veronica.webp") no-repeat center;
+    background-size: cover;
+}
+.section-products #product-8 .part-1::before {
+    background: url("../../Components/Assets/Imgs/Productos/4x4/LecheenPolvo-LaPaulina.webp") no-repeat center;
+    background-size: cover;
+}
+.section-products #product-9 .part-1::before {
+    background: url("../../Components/Assets/Imgs/Productos/4x4/LecheDescremada-Veronica.webp") no-repeat center;
+    background-size: cover;
+}
+.section-products #product-10 .part-1::before {
+    background: url("../../Components/Assets/Imgs/Productos/4x4/Pan-CasaPan.webp") no-repeat center;
+    background-size: cover;
+}
+.section-products #product-11 .part-1::before {
+    background: url("../../Components/Assets/Imgs/Productos/4x4/Polenta-MolinoVillafañe.webp") no-repeat center;
+    background-size: cover;
+}
+.section-products #product-12 .part-1::before {
+    background: url("../../Components/Assets/Imgs/Productos/4x4/QuesoRallado-LaPaulina.webp") no-repeat center;
+    background-size: cover;
+}
+.section-products #product-13 .part-1::before {
+    background: url("../../Components/Assets/Imgs/Productos/4x4/QuesoRallado-LaPaulina150.webp") no-repeat center;
+    background-size: cover;
+}
+.section-products #product-14 .part-1::before {
+    background: url("../../Components/Assets/Imgs/Productos/4x4/Huevo.webp") no-repeat center;
+    background-size: cover;
+}
+.section-products #product-15 .part-1::before {
+    background: url("../../Components/Assets/Imgs/Productos/4x4/Aceite.webp") no-repeat center;
+    background-size: cover;
+}
+.section-products #product-16 .part-1::before {
+    background: url("../../Components/Assets/Imgs/Productos/4x4/Nutrifor/remolachasCongeladas.webp") no-repeat center;
+    background-size: cover;
+}
+.section-products #product-17 .part-1::before {
+    background: url("../../Components/Assets/Imgs/Productos/4x4/Nutrifor/1.webp") no-repeat center;
+    background-size: cover;
+}
+.section-products #product-18 .part-1::before {
+    background: url("../../Components/Assets/Imgs/Productos/4x4/Nutrifor/batataCongelada.webp") no-repeat center;
+    background-size: cover;
+}
+.section-products #product-19 .part-1::before {
+    background: url("../../Components/Assets/Imgs/Productos/4x4/Nutrifor/zapallitoCongelado.webp") no-repeat center;
+    background-size: cover;
+}
+.section-products #product-20 .part-1::before {
+    background: url("../../Components/Assets/Imgs/Productos/4x4/Nutrifor/mixVegetalesCongelados.webp") no-repeat center;
+    background-size: cover;
+}
+.section-products #product-21 .part-1::before {
+    background: url("../../Components/Assets/Imgs/Productos/4x4/Nutrifor/morronCongelado.webp") no-repeat center;
+    background-size: cover;
+}
+.section-products #product-22 .part-1::before {
+    background: url("../../Components/Assets/Imgs/Productos/4x4/Nutrifor/8.webp") no-repeat center;
+    background-size: cover;
+}
+.section-products #product-23 .part-1::before {
+    background: url("../../Components/Assets/Imgs/Productos/4x4/Nutrifor/CebollaDeVerdeo.webp") no-repeat center;
+    background-size: cover;
+}
+.section-products #product-24 .part-1::before {
+    background: url("../../Components/Assets/Imgs/Productos/4x4/Nutrifor/MadiocaCongelado.webp") no-repeat center;
+    background-size: cover;
+}
+.section-products #product-25 .part-1::before {
+    background: url("../../Components/Assets/Imgs/Productos/4x4/Carnes/COSTILLA-DE-NOVILLO.webp") no-repeat center;
+    background-size: cover;
+}
+.section-products #product-26 .part-1::before {
+    background: url("../../Components/Assets/Imgs/Productos/4x4/Carnes/VacioDeNovillo.webp") no-repeat center;
+    background-size: cover;
+}
+.section-products #product-27 .part-1::before {
+    background: url("../../Components/Assets/Imgs/Productos/4x4/Carnes/MatambredeNovillo.webp") no-repeat center;
+    background-size: cover;
+}
+.section-products #product-28 .part-1::before {
+  background: url("../../Components/Assets/Imgs/Productos/4x4/Carnes/PeletaDeCerdo.webp") no-repeat center;
+  background-size: cover;
+}
+.section-products #product-29 .part-1::before {
+  background: url("../../Components/Assets/Imgs/Productos/4x4/Carnes/CarreDeCerdo.webp") no-repeat center;
+  background-size: cover;
+}
+.section-products #product-30 .part-1::before {
+  background: url("../../Components/Assets/Imgs/Productos/4x4/Carnes/PechitoCerdo.webp") no-repeat center;
+  background-size: cover;
+}
+.section-products #product-31 .part-1::before {
+  background: url("../../Components/Assets/Imgs/Productos/4x4/Carnes/PernilCerdo.webp") no-repeat center;
+  background-size: cover;
+}
+.section-products #product-32 .part-1::before {
+  background: url("../../Components/Assets/Imgs/Productos/4x4/Carnes/ChorizoParrillero.webp") no-repeat center;
+  background-size: cover;
+}
+.section-products #product-33 .part-1::before {
+  background: url("../../Components/Assets/Imgs/Productos/4x4/Carnes/ChorizoEspecial.webp") no-repeat center;
+  background-size: cover;
+}
+.section-products #product-34 .part-1::before {
+  background: url("../../Components/Assets/Imgs/Productos/4x4/Carnes/Albondigas.webp") no-repeat center;
+  background-size: cover;
+}
+.section-products #product-35 .part-1::before {
+  background: url("../../Components/Assets/Imgs/Productos/4x4/Carnes/ArrolladoDePollo.webp") no-repeat center;
+  background-size: cover;
+}
+.section-products #product-36 .part-1::before {
+  background: url("../../Components/Assets/Imgs/Productos/4x4/Carnes/ArrolladoDeCarne.webp") no-repeat center;
+  background-size: cover;
+}
+.section-products #product-37 .part-1::before {
+  background: url("../../Components/Assets/Imgs/Productos/4x4/Carnes/ArrolladoDePollo.webp") no-repeat center;
+  background-size: cover;
+}
+.section-products #product-38 .part-1::before {
+  background: url("../../Components/Assets/Imgs/Productos/4x4/Carnes/MilanesaCarne.webp") no-repeat center;
+  background-size: cover;
+}
+.section-products #product-39 .part-1::before {
+  background: url("../../Components/Assets/Imgs/Productos/4x4/Carnes/MilanesaCerdo.webp") no-repeat center;
+  background-size: cover;
+}
+.section-products #product-40 .part-1::before {
+  background: url("../../Components/Assets/Imgs/Productos/4x4/Carnes/MilanesaPollo.webp") no-repeat center;
+  background-size: cover;
+}
+.section-products #product-41 .part-1::before {
+  background: url("../../Components/Assets/Imgs/Productos/4x4/Carnes/cabezaDeCerdo.webp") no-repeat center;
+  background-size: cover;
+}
+.section-products #product-42 .part-1::before {
+  background: url("../../Components/Assets/Imgs/Productos/4x4/LecheEntera.webp") no-repeat center;
+  background-size: cover;
+} 
+.section-products #product-43 .part-1::before {
+  background: url("../../Components/Assets/Imgs/Productos/4x4/Surubi.webp") no-repeat center;
+  background-size: cover;
+}
+.section-products #product-44 .part-1::before {
+  background: url("../../Components/Assets/Imgs/Productos/4x4/sabalo_entero.webp") no-repeat center;
+  background-size: cover;
+}
+.section-products #product-45 .part-1::before {
+  background: url("../../Components/Assets/Imgs/Productos/4x4/pati.webp") no-repeat center;
+  background-size: cover;
+}
+.section-products #product-46 .part-1::before {
+  background: url("../../Components/Assets/Imgs/Productos/4x4/Azúcar-Mitaí.webp") no-repeat center;
+  background-size: cover;
+}
+.section-products #product-47 .part-1::before {
+  background: url("../../Components/Assets/Imgs/Productos/4x4/Gas.webp") no-repeat center;
+  background-size: cover;
+}
+.section-products #product-48 .part-1::before {
+  background: url("../../Components/Assets/Imgs/Productos/4x4/Huevo_doc.webp") no-repeat center;
+  background-size: cover;
+}
+.section-products #product-49 .part-1::before {
+  background: url("../../Components/Assets/Imgs/Productos/4x4/Carnes/cabezaDeCerdo.webp") no-repeat center;
+  background-size: cover;
+}
+.section-products #product-50 .part-1::before {
+  background: url("../../Components/Assets/Imgs/Productos/4x4/Carnes/IMG2.webp") no-repeat center;
+  background-size: cover;
+}
+.section-products #product-51 .part-1::before {
+  background: url("../../Components/Assets/Imgs/Productos/4x4/Carnes/IMG1.webp") no-repeat center;
+  background-size: cover;
+}
+
+
+
+
+
+.section-products .single-product .part-1 .discount,
+.section-products .single-product .part-1 .new {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    color: #ffffff;
+    background-color: #fe302f;
+    padding: 2px 8px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.section-products .single-product .part-1 .new {
+    left: 0;
+    background-color: #444444;
+}
+
+.section-products .single-product .part-1 ul {
+    position: absolute;
+    bottom: -41px;
+    left: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    opacity: 0;
+    transition: bottom 0.5s, opacity 0.5s;
+}
+
+.section-products .single-product:hover .part-1 ul {
+    bottom: 30px;
+    opacity: 1;
+}
+
+.section-products .single-product .part-1 ul li {
+    display: inline-block;
+    margin-right: 4px;
+}
+
+.section-products .single-product .part-1 ul li a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #ffffff;
+    color: #444444;
+    text-align: center;
+    box-shadow: 0 2px 20px rgb(50 50 50 / 10%);
+    transition: color 0.2s;
+}
+
+.section-products .single-product .part-1 ul li a:hover {
+    color: #fe302f;
+}
+
+.section-products .single-product .part-2 .product-title {
+    font-size: 1rem;
+}
+
+.section-products .single-product .part-2 h4 {
+    display: inline-block;
+    font-size: 1rem;
+}
+
+.section-products .single-product .part-2 .product-old-price {
+    position: relative;
+    padding: 0 7px;
+    margin-right: 2px;
+    opacity: 0.6;
+}
+
+.section-products .single-product .part-2 .product-old-price::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #444444;
+    transform: translateY(-50%);
+}
+
+
+
+
+/* STYLE TITULO */
+
+
+.text-line {
+  stroke-dasharray: 200;
+  stroke-dashoffset: 500;
+  animation: dash 4s linear forwards, filling 2s ease-in forwards;
+ 
+}
+
+.text-line text {
+  font-family: Helvetica,Arial,sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes filling {
+  0%, 90% { fill: #091e3e; fill-opacity: 0; }
+  100% { fill: #091e3e; fill-opacity: 1; }
+}
+
+
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////// */
+
+
